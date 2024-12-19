@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Автомобиль",
+        "age": "Современный",
+        "photo_url": "https://i.imgur.com/1z9gq0u.png"
+    },
+    {
+        "name": "Велосипед",
+        "age": "Старинный",
+        "photo_url": "https://i.imgur.com/2z8w9vq.png"
+    },
+    {
+        "name": "Самолет",
+        "age": "Современный",
+        "photo_url": "https://i.imgur.com/3z7x0wq.png"
+    },
+    {
+        "name": "Лодка",
+        "age": "Классический",
+        "photo_url": "https://i.imgur.com/4z6y1vq.png"
+    }
+]

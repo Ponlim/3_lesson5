@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Леонардо",
+        "age": 16,
+        "person_photo": "https://kartinki.pics/uploads/posts/2022-03/1646288320_1-kartinkin-net-p-kartinki-pro-leo-iz-cherepashek-nindzya-1.jpg"
+    },
+    {
+        "name": "Донателло",
+        "age": 16,
+        "person_photo": "https://i.imgur.com/2z8w9vq.png"
+    },
+    {
+        "name": "Рафаэль",
+        "age": 16,
+        "person_photo": "https://i.imgur.com/3z7x0wq.png"
+    },
+    {
+        "name": "Микеланджело",
+        "age": 16,
+        "person_photo": "https://i.imgur.com/4z6y1vq.png"
+    }
+]

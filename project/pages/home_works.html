@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Works</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/home_works.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="inner_header">
+                <a href="../index.html">
+                    <div class="logotype">
+                        <h2>Java<span>Script</span></h2>
+                    </div>
+                </a>
+                <ul class="menu">
+                    <li class="menu_link">
+                        <a href="../pages/home_works.html">Home Works</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/lessons.html">Lessons</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="https://t.me/NurDinBuy16" target="_blank">Send message</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/game.html">Game</a>
+                    </li>
+                </ul>
+                <button class="btn" id="btn-get">Click me!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gmail_block">
+        <div class="container">
+            <h3>Home work 1 (part 1)</h3>
+            <div class="inner_gmail_block">
+                <div class="form_gmail">
+                    <label for="gmail_input"></label>
+                    <input type="text" id="gmail_input" placeholder="your gmail">
+                    <button class="btn" id="gmail_button">Check gmail</button>
+                    <span class="checker" id="gmail_result"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="move_block">
+        <div class="container">
+            <h3>Home work 1 (part 2)</h3>
+            <div class="inner_move_block">
+                <div class="parent_block">
+                    <div class="child_block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stopwatch">
+        <div class="container">
+            <h3>Home work 2 </h3>
+            <div class="time">
+                <div class="time_block">
+                    <div class="interval" id="seconds">0</div>
+                </div>
+            </div>
+            <div class="time_buttons">
+                <button class="btn" id="start">Start</button>
+                <button class="btn" id="stop">Stop</button>
+                <button class="btn" id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="characters">
+        <div class="container">
+            <div class="characters-list">
+
+            </div>
+        </div>
+    </div>
+    
+        <div class="characters">
+            <div class="container">
+                <h1>Карточки персонажей</h1>
+                <div class="characters-list"></div>
+            </div>
+        </div>
+    
+        <script>
+            // Получаем ссылку на список персонажей
+            const charactersList = document.querySelector('.characters-list');
+    
+            // Функция для загрузки данных из JSON файла
+            function loadCharacters() {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'persons.json', true);
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        const characters = JSON.parse(xhr.responseText);
+                        displayCharacters(characters);
+                    } else {
+                        console.error('Ошибка загрузки данных');
+                    }
+                };
+                xhr.send();
+            }
+    
+            // Функция для отображения персонажей на странице
+            function displayCharacters(characters) {
+                characters.forEach(character => {
+                    // Создаем карточку персонажа
+                    const card = document.createElement('div');
+                    card.classList.add('character-card');
+    
+                    // Создаем контейнер для фото
+                    const photoContainer = document.createElement('div');
+                    photoContainer.classList.add('character-photo');
+    
+                    // Создаем изображение
+                    const photo = document.createElement('img');
+                    photo.src = character.person_photo;
+                    photo.alt = character.name;
+    
+                    // Создаем элемент для имени
+                    const name = document.createElement('div');
+                    name.classList.add('character-name');
+                    name.textContent = character.name;
+    
+                    // Создаем элемент для возраста
+                    const age = document.createElement('div');
+                    age.classList.add('character-age');
+                    age.textContent = `Возраст: ${character.age}`;
+    
+                    // Добавляем элементы в карточку
+                    photoContainer.appendChild(photo);
+                    card.appendChild(photoContainer);
+                    card.appendChild(name);
+                    card.appendChild(age);
+    
+                    // Добавляем карточку в список персонажей
+                    charactersList.appendChild(card);
+                });
+            }
+    
+            // Загружаем персонажей при загрузке страницы
+            loadCharacters();
+        </script>
+    
+
+    <div class="footer">
+        <div class="container">
+            <a href="https://www.instagram.com/nurdinbuy/" target="_blank">
+                <div class="inner_footer">
+                    <h2>Made by NurDinBuy</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal_dialog">
+        <div class="modal_content">
+            <form action="#">
+                <div class="modal_close">&times;</div>
+                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
+                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
+                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../js/home_works.js"></script>
+<script src="../js/modal.js"></script>
+</html>

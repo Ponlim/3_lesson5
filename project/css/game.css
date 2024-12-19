@@ -1,0 +1,172 @@
+:root {
+  --main-margin: 50px;
+  --secondary-margin: 350px;
+  --orange: #ffa500; /* Добавлен цвет */
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.extra-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: var(--main-margin);
+}
+
+canvas {
+  background-color: #000;
+  border: 2px solid #fff;
+  margin: var(--main-margin) 0;
+}
+
+.game-love_is {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#game-block {
+  width: 700px;
+  height: 900px;
+  background-color: #fff;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+
+#message {
+  font-size: 24px;
+  color: #000;
+}
+
+#photo {
+  max-width: 100%; /* Максимальная ширина фото не превышает ширину родительского блока */
+  max-height: 100%; /* Максимальная высота фото не превышает высоту родительского блока */
+  object-fit: contain; /* Фото будет масштабироваться, чтобы полностью поместиться в блок */
+}
+
+#changes-photo-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.move_block {
+  background: black;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.parent_block {
+  height: 758px;
+  width: 900px;
+  border: 1px solid var(--orange);
+  position: relative;
+  margin: 0 auto;
+  background-size: cover; 
+}
+
+.child_block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.move_child_block {
+  border: 2px solid var(--orange);
+  box-shadow: 0 0 10px var(--orange);
+}
+
+.photo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.photo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.move_photo_btn {
+  background-color: #ff6347; /* Красный цвет для кнопок с фото */
+  border: 2px solid #ff4500;
+}
+
+.move_photo_btn:hover {
+  background-color: #ff4500;
+}
+
+.speed-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.speed-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.move_speed_btn {
+  background-color: #32cd32; /* Зеленый цвет для кнопок скорости */
+  border: 2px solid #228b22;
+}
+
+.move_speed_btn:hover {
+  background-color: #228b22;
+}
+
+.photo-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.rotate-right {
+  transform: rotate(0deg);
+}
+
+.rotate-down {
+  transform: rotate(90deg);
+}
+
+.rotate-left {
+  transform: rotate(180deg);
+}
+
+.rotate-up {
+  transform: rotate(270deg);
+}
+

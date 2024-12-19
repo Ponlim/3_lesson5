@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Works</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="inner_header">
+                    <a href="../index.html">
+                        <div class="logotype">
+                            <h2>Java<span>Script</span></h2>
+                        </div>
+                    </a>
+                    <ul class="menu">
+                        <li class="menu_link">
+                            <a href="../pages/home_works.html">Home Works</a>
+                        </li>
+                        <li class="menu_link">
+                            <a href="../pages/lessons.html">Lessons</a>
+                        </li>
+                        <li class="menu_link">
+                            <a href="https://t.me/NurDinBuy16" target="_blank">Send message</a>
+                        </li>
+                        <li class="menu_link">
+                            <a href="../pages/game.html">Game</a>
+                        </li>
+                    </ul>
+                    <button class="btn" id="btn-get">Click me!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="extra-container">
+            <section class="game-pong">
+                <canvas id="pong" width="600" height="400"></canvas>
+            </section>
+            <section class="game-love_is">
+                <div id="game-block">
+                    <p id="message">Love is...</p>
+                </div>
+                <button id="changes-photo-btn">Changes Photo</button>
+            </section>
+            <div class="move_block">
+                <div class="parent_block" style="background: url(../photos/sonic_bcg.jpeg); background-size: cover;">
+                    <div class="child_block move_child_block" style="background: url(../photos/sonic-corriendo.gif); background-size: cover;"></div>
+                </div>
+                <div class="photo-buttons">
+                    <button class="photo-btn move_photo_btn" data-photo="1">
+                        <img class="photo-icon" src="../photos/sonic-corriendo.gif" alt="Photo 1">
+                    </button>
+                    <button class="photo-btn move_photo_btn" data-photo="2">
+                        <img class="photo-icon" src="../photos/pacman.gif" alt="Photo 2">
+                    </button>
+                    <button class="photo-btn move_photo_btn" data-photo="3">
+                        <img class="photo-icon" src="../photos/luigi-run.gif" alt="Photo 3">
+                    </button>
+                    <button class="photo-btn move_photo_btn" data-photo="4">
+                        <img class="photo-icon" src="../photos/road_car-two.gif" alt="Photo 4">
+                    </button>
+                    <button class="photo-btn move_photo_btn" data-photo="5">
+                        <img class="photo-icon" src="../photos/contra.gif" alt="Photo 5">
+                    </button>
+                    <button class="photo-btn move_photo_btn" data-photo="6">
+                        <img class="photo-icon" src="../photos/galaxian.gif" alt="Photo 7">
+                    </button>
+                </div>
+                <div class="speed-buttons">
+                    <button class="speed-btn move_speed_btn" data-speed="1">1</button>
+                    <button class="speed-btn move_speed_btn" data-speed="2">2</button>
+                    <button class="speed-btn move_speed_btn" data-speed="3">3</button>
+                    <button class="speed-btn move_speed_btn" data-speed="4">4</button>
+                    <button class="speed-btn move_speed_btn" data-speed="5">5</button>
+                    <button class="speed-btn move_speed_btn" data-speed="6">6</button>
+                    <button class="speed-btn move_speed_btn" data-speed="7">7</button>
+                    <button class="speed-btn move_speed_btn" data-speed="8">8</button>
+                    <button class="speed-btn move_speed_btn" data-speed="9">9</button>
+                    <button class="speed-btn move_speed_btn" data-speed="10">10</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <a href="https://www.instagram.com/nurdinbuy/" target="_blank">
+                    <div class="inner_footer">
+                        <h2>Made by NurDinBuy</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal_dialog">
+            <div class="modal_content">
+                <form action="#">
+                    <div class="modal_close">&times;</div>
+                    <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
+                    <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                    <input required placeholder="Ваш номер телефона" name="phone" type="tel" class="modal_input">
+                    <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/game.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+</html>

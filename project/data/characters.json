@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Леонардо",
+        "age": 16,
+        "photo_url": "https://i.imgur.com/1z9gq0u.png"
+    },
+    {
+        "name": "Донателло",
+        "age": 16,
+        "photo_url": "https://i.imgur.com/2z8w9vq.png"
+    },
+    {
+        "name": "Рафаэль",
+        "age": 16,
+        "photo_url": "https://i.imgur.com/3z7x0wq.png"
+    },
+    {
+        "name": "Микеланджело",
+        "age": 16,
+        "photo_url": "https://i.imgur.com/4z6y1vq.png"
+    }
+]
